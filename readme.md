@@ -16,23 +16,6 @@
 #define KERNEL_REGMGR_SETINT 0x4CEAB0
 ```
 ```
-//Reading kernel_base...
-void* kernel_base = &((uint8_t*)__readmsr(0xC0000082))[-KERN_XFAST_SYSCALL];
-uint8_t* kernel_ptr = (uint8_t*)kernel_base;
-void** got_prison0 =   (void**)&kernel_ptr[KERN_PRISON_0];
-void** got_rootvnode = (void**)&kernel_ptr[KERN_ROOTVNODE];
-
-// sceSblACMgrIsSystemUcred
-uint64_t *sonyCred = (uint64_t *)(((char *)td_ucred) + 96);
-*sonyCred = 0xffffffffffffffff;
-// sceSblACMgrGetDeviceAccessType
-uint64_t *sceProcType = (uint64_t *)(((char *)td_ucred) + 88);
-*sceProcType = 0x3801000000000013; // Max access
-// sceSblACMgrHasSceProcessCapability
-uint64_t *sceProcCap = (uint64_t *)(((char *)td_ucred) + 104);
-*sceProcCap = 0xffffffffffffffff; // Sce Process
-```
-```
 //Perm Browser Patch - CrazyVoids 
 uint64_t *(sceRegMgrSetInt)(uint32_t regId, int value) = NULL;
 sceRegMgrSetInt = (void *)&ptrKernel[KERNEL_REGMGR_SETINT];
@@ -50,23 +33,6 @@ Will add more soon.
 #define KERN_ROOTVNODE 0x21AFA30
 #define KERN_PTRACE_CHECK 0x17D2C1
 
-```
-```
-//Reading kernel_base...
-void* kernel_base = &((uint8_t*)__readmsr(0xC0000082))[-KERN_XFAST_SYSCALL];
-uint8_t* kernel_ptr = (uint8_t*)kernel_base;
-void** got_prison0 =   (void**)&kernel_ptr[KERN_PRISON_0];
-void** got_rootvnode = (void**)&kernel_ptr[KERN_ROOTVNODE];
-
-// sceSblACMgrIsSystemUcred
-uint64_t *sonyCred = (uint64_t *)(((char *)td_ucred) + 96);
-*sonyCred = 0xffffffffffffffff;
-// sceSblACMgrGetDeviceAccessType
-uint64_t *sceProcType = (uint64_t *)(((char *)td_ucred) + 88);
-*sceProcType = 0x3801000000000013; // Max access
-// sceSblACMgrHasSceProcessCapability
-uint64_t *sceProcCap = (uint64_t *)(((char *)td_ucred) + 104);
-*sceProcCap = 0xffffffffffffffff; // Sce Process
 ```
 ```
 // debug settings FULL
@@ -165,23 +131,6 @@ KERN_PTRACE_CHECK 0x30D633 //5.01 Thanks to J00ni3 - Need Verification
 DT_HASH_SEGMENT		0xB5EE20 //5.01
 ```
 ```
-//Reading kernel_base...
-void* kernel_base = &((uint8_t*)__readmsr(0xC0000082))[-KERN_XFAST_SYSCALL];
-uint8_t* kernel_ptr = (uint8_t*)kernel_base;
-void** got_prison0 =   (void**)&kernel_ptr[KERN_PRISON_0];
-void** got_rootvnode = (void**)&kernel_ptr[KERN_ROOTVNODE];
-
-// sceSblACMgrIsSystemUcred
-uint64_t *sonyCred = (uint64_t *)(((char *)td_ucred) + 96);
-*sonyCred = 0xffffffffffffffff;
-// sceSblACMgrGetDeviceAccessType
-uint64_t *sceProcType = (uint64_t *)(((char *)td_ucred) + 88);
-*sceProcType = 0x3801000000000013; // Max access
-// sceSblACMgrHasSceProcessCapability
-uint64_t *sceProcCap = (uint64_t *)(((char *)td_ucred) + 104);
-*sceProcCap = 0xffffffffffffffff; // Sce Process
-```
-```
   
 // debug settings patches 5.01
 *(char *)(kernel_base + 0x1CD0686) |= 0x14;
@@ -267,23 +216,6 @@ KERN_PMAP_STORE		0x22CB570
 
 DT_HASH_SEGMENT		0xB5EF30
 
-```
-```
-//Reading kernel_base...
-void* kernel_base = &((uint8_t*)__readmsr(0xC0000082))[-KERN_XFAST_SYSCALL];
-uint8_t* kernel_ptr = (uint8_t*)kernel_base;
-void** got_prison0 =   (void**)&kernel_ptr[KERN_PRISON_0];
-void** got_rootvnode = (void**)&kernel_ptr[KERN_ROOTVNODE];
-
-// sceSblACMgrIsSystemUcred
-uint64_t *sonyCred = (uint64_t *)(((char *)td_ucred) + 96);
-*sonyCred = 0xffffffffffffffff;
-// sceSblACMgrGetDeviceAccessType
-uint64_t *sceProcType = (uint64_t *)(((char *)td_ucred) + 88);
-*sceProcType = 0x3801000000000013; // Max access
-// sceSblACMgrHasSceProcessCapability
-uint64_t *sceProcCap = (uint64_t *)(((char *)td_ucred) + 104);
-*sceProcCap = 0xffffffffffffffff; // Sce Process
 ```
 ```
 //UART Enabler 5.05 Thanks to @DiwiDog // https://twitter.com/diwidog/status/996362528312647680
