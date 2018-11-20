@@ -103,11 +103,11 @@ kernelBase[0x258CCD0]
 #define kern_off_smp_no_rendevous_barrier   0x0B1FD0 // Updated
 #define kern_off_icc_query_nowait           0x07FF00 // Updated
 
-#define kern_off_kernel_map                 0x  // Cant Locate
-#define kern_off_sysent                     0x  // Cant Locate
-#define kern_off_kernel_pmap_store          0x  // Cant Locate
+#define kern_off_kernel_map                 0x1B39218 // Needs Verification
+#define kern_off_sysent                     0x0x1034790  // Needs Verification
+#define kern_off_kernel_pmap_store          0x21C5A38  // Needs Verification
 #define kern_off_Starsha_UcodeInfo 0
-#define kern_off_gpu_devid_is_9924          0x  // Cant Locate
+#define kern_off_gpu_devid_is_9924          0x4976A0 // Needs Verification
 #define kern_off_gc_get_fw_info             0x4A2250 // Updated
 #define kern_off_pml4pml4i                  0x21C5A28 // Updated
 #define kern_off_dmpml4i                    0x21C5A2C // Updated
