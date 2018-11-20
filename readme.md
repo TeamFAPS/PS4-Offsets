@@ -342,6 +342,11 @@ DT_HASH_SEGMENT		0xB5EF30
 #define kern_off_dmpml4i                    0x22CB564
 #define kern_off_dmpdpi                     0x22CB568
 ```
+# 6.00 Offsets
+```
+KERN_XFAST_SYSCALL 0x00001C0
+
+```
 Please make an pull request for anything that is missing or want to add something.
 This will be updated over a period of time adding more offsets.
 
