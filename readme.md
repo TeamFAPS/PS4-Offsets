@@ -104,7 +104,7 @@ kernelBase[0x258CCD0]
 #define kern_off_icc_query_nowait           0x07FF00 // Updated
 
 #define kern_off_kernel_map                 0x1B39218 // Needs Verification
-#define kern_off_sysent                     0x0x1034790  // Needs Verification
+#define kern_off_sysent                     0x1034790  // Needs Verification
 #define kern_off_kernel_pmap_store          0x21C5A38  // Needs Verification
 #define kern_off_Starsha_UcodeInfo 0
 #define kern_off_gpu_devid_is_9924          0x4976A0 // Needs Verification
