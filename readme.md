@@ -5,6 +5,10 @@
   <br>
 </p>
 
+# 3.55
+
+# 3.70
+
 # 4.05
 ```
 #define KERN_XFAST_SYSCALL 0x30EB30
@@ -103,11 +107,11 @@ kernelBase[0x258CCD0]
 #define kern_off_smp_no_rendevous_barrier   0x0B1FD0 // Updated
 #define kern_off_icc_query_nowait           0x07FF00 // Updated
 
-#define kern_off_kernel_map                 0x  // Cant Locate
-#define kern_off_sysent                     0x  // Cant Locate
-#define kern_off_kernel_pmap_store          0x  // Cant Locate
+#define kern_off_kernel_map                 0x1B39218 // Updated CB
+#define kern_off_sysent                     0x1034790 // Updated CB
+#define kern_off_kernel_pmap_store          0x21C5A38 // Updated CB
 #define kern_off_Starsha_UcodeInfo 0
-#define kern_off_gpu_devid_is_9924          0x  // Cant Locate
+#define kern_off_gpu_devid_is_9924          0x4976A0 // Needs Verification
 #define kern_off_gc_get_fw_info             0x4A2250 // Updated
 #define kern_off_pml4pml4i                  0x21C5A28 // Updated
 #define kern_off_dmpml4i                    0x21C5A2C // Updated
@@ -192,7 +196,7 @@ sceRegMgrSetInt(0x3C040000, 0, 0, 0, 0);
 #define kern_off_sysent 0x107C610
 #define kern_off_kernel_pmap_store 0x22CB4F0
 #define kern_off_Starsha_UcodeInfo 0
-#define kern_off_gpu_devid_is_9924 0x4DDC40
+#define kern_off_gpu_devid_is_9924 0x4DDC00
 #define kern_off_gc_get_fw_info 0x4D33D0
 
 #define kern_off_pml4pml4i 0x22CB4E0
@@ -341,6 +345,11 @@ DT_HASH_SEGMENT		0xB5EF30
 #define kern_off_pml4pml4i                  0x22CB560 // Pending verification.
 #define kern_off_dmpml4i                    0x22CB564
 #define kern_off_dmpdpi                     0x22CB568
+```
+# 6.00 Offsets
+```
+KERN_XFAST_SYSCALL 0x00001C0
+
 ```
 Please make an pull request for anything that is missing or want to add something.
 This will be updated over a period of time adding more offsets.
