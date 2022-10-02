@@ -97,21 +97,21 @@ kernelBase[0x258CCD0]
 #define kern_off_kmem_free                  0x16E100 // Updated
 #define kern_off_pmap_extract               0x41EA30 // Updated
 #define kern_off_pmap_protect               0x421180 // Updated
-#define kern_off_sched_pin                  0x072D50 //Updated
-#define kern_off_sched_unpin                0X072D60 //Updated
-#define kern_off_smp_rendezvous             0x0B2210 //Updated
-#define kern_off_smp_no_rendevous_barrier   0x0B1FD0 //Updated
-#define kern_off_icc_query_nowait           0x07FF00 //Updated
+#define kern_off_sched_pin                  0x072D50 // Updated
+#define kern_off_sched_unpin                0X072D60 // Updated
+#define kern_off_smp_rendezvous             0x0B2210 // Updated
+#define kern_off_smp_no_rendevous_barrier   0x0B1FD0 // Updated
+#define kern_off_icc_query_nowait           0x07FF00 // Updated
 
 #define kern_off_kernel_map                 0x  // Cant Locate
 #define kern_off_sysent                     0x  // Cant Locate
 #define kern_off_kernel_pmap_store          0x  // Cant Locate
 #define kern_off_Starsha_UcodeInfo 0
 #define kern_off_gpu_devid_is_9924          0x  // Cant Locate
-#define kern_off_gc_get_fw_info             0x4A2250 //Updated
-#define kern_off_pml4pml4i                  0x  // Cant Locate
-#define kern_off_dmpml4i                    0x  // Cant Locate
-#define kern_off_dmpdpi                     0x  // Cant Locate
+#define kern_off_gc_get_fw_info             0x4A2250 // Updated
+#define kern_off_pml4pml4i                  0x21C5A28 // Updated
+#define kern_off_dmpml4i                    0x21C5A2C // Updated
+#define kern_off_dmpdpi                     0x21C5E30 // Updated
 #endif
 
 ```
